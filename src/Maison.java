@@ -15,6 +15,12 @@ public class Maison extends BienImmobilier{
         this.surfaceTerrain = surfaceTerrain;
         this.piscine = false;
     }
+    
+    public double dpe() {
+        double resultat = 0;
+        resultat = (consommationKWhAn() * this.mapOrientation.get(this.Orientation) * this.mapMenuiserie.get(this.Menuiserie) * this.mapChauffage.get(this.Chauffage) * this.mapIsolation.get(this.Isolation)) /100;
+        return resultat;
+    }
 
     @Override
     public String toString() {

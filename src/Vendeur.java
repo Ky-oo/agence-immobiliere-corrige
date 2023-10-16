@@ -21,4 +21,8 @@ public class Vendeur extends Personne {
         return resultat;
     }
 
+    public void addGestion(BienImmobilier appart){
+        biensImmobiliersEnGestion.add(0, appart);
+    }
+
 }
