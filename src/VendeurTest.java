@@ -25,8 +25,11 @@ public class VendeurTest {
         appartement1.ajouterPiece(new PieceQuadrilatere(salleDeBain, "0", 2, 2));
         appartement1.ajouterPiece(new PieceQuadrilatere(Cave, "-1", 3, 3));
         // Création de l'annonce associée au bien immobilier : Appartement
-        Annonce annonceAppartement = new Annonce("AA0922001", "27/09/2023", "Appartement avec vue sur le Lac d'Annecy",
-                6380, appartement1);
+        Annonce annonceAppartement = new Annonce("AA0922001", "27/09/2023", "Appartement avec vue sur le Lac d'Annecy", 6380, appartement1);
+
+        vendeur.addGestion(appartement1);
+        
+
       
         Maison maison1 = new Maison("rue de la Gare", "Annecy", "74000", vendeur, 500);
         maison1.ajouterPiece(new PieceQuadrilatere(chambre, "0", 5, 2));
@@ -35,10 +38,10 @@ public class VendeurTest {
         // Création de l'annonce associée au bien immobilier : Appartement
         Annonce annonceMaison = new Annonce("AA093366", "04/10/2023", "Villa de luxe",
                 4800, maison1);
-       
+       vendeur.addGestion(maison1);
         Appartement appartement2 = new Appartement("rue des moulins", "Annecy", "74000", vendeur, "1");
         appartement2.ajouterPiece(new PieceQuadrilatere(chambre, "0", 10, 3));
-
+        vendeur.addGestion(appartement2);
         // Création de l'annonce associée au bien immobilier : Appartement
         Annonce annonceMonAppartement = new Annonce("AB0622001", "30/09/2023", "Studio spacieux",
                 3600, appartement2);
